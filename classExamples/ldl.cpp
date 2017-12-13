@@ -1,5 +1,5 @@
 #include <iostream>
-
+// its changd
 using namespace std;
 
 bool checkLDL(float ldl)
