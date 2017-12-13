@@ -5,6 +5,7 @@ using namespace std;
 int main()
 {
    int size = 0;
+   
    cout << "Size of string: ";
    cin >> size;
    cin.ignore(1);
