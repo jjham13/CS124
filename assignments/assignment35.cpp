@@ -22,7 +22,7 @@ using namespace std;
 /**********************************************************************
  * Convert grade to a letter grade A, B, C, D, F
  * *******************************************************************/
-char computeLetterGrade(int grade)
+char computeLetterGrade(const int grade)
 {
    char letter = '\0';
    switch(grade / 10)
@@ -50,7 +50,7 @@ char computeLetterGrade(int grade)
  * Determine sign (+ or -) for the letter grade.  If no sign is needed
  * then return '*'.
  * *******************************************************************/
-char computeGradeSign(int grade)
+char computeGradeSign(const int grade)
 {
    int lastDigit = grade % 10;
    char sign = '*';

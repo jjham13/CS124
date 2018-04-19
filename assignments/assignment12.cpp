@@ -25,7 +25,7 @@ int main()
    cout.precision(2);
 
    // Obtain monthly income and display properly formatted
-   cout << "\tYour monthly income:";
+   cout << "\tYour monthly income: ";
    cin >> income;
 
    cout << "Your income is: $" << setw(9) << income << endl;

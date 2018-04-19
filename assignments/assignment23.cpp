@@ -14,7 +14,7 @@ using namespace std;
 /**********************************************************************
  * Sum all multiples of the specified value from 1 to less than 100 
  * ********************************************************************/
-int sumMultiples(int multiple)
+int sumMultiples(const int multiple)
 {
    int sum = 0;
    for (int i=1; i<100; i++)

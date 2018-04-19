@@ -15,14 +15,16 @@ using namespace std;
 /**********************************************************************
  * Return the tax bracket as an integer value
  * *******************************************************************/
-int computeTax(double income)
+int computeTax(const double income)
 {
    int tax = 0;
 
+   // Start with the one end of the range
    if (income <= 15100)
    {
       tax = 10;
    }
+   // Already know that the income is > 15100 because of the step above.
    else if (income <= 61300)
    {
       tax = 15; 
@@ -39,6 +41,7 @@ int computeTax(double income)
    {
       tax = 33;
    }
+   // I could do an else if, but an else is easier
    else
    {
       tax = 35;

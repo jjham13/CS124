@@ -26,7 +26,7 @@ void getFileName(char fileName[])
  * is an error opening the file or if there is more or less than 10
  * grades, then display an error and return an average of -1.0.
  * ********************************************************************/
-float readFile(char fileName[])
+float readFile(const char fileName[])
 {
    int count = 0;
    int sum = 0;
@@ -60,7 +60,7 @@ float readFile(char fileName[])
 /**********************************************************************
  * Display the average
  * *******************************************************************/
-void display(float average)
+void display(const float average)
 {
    if (average >= 0.0)  // A negative average indicates an error
    {

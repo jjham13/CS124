@@ -14,7 +14,7 @@ using namespace std;
 /**********************************************************************
  * Get the grades from the user and return as an array with the size
  * ********************************************************************/
-void getGrades(int grades[], int numGrades)
+void getGrades(int grades[], const int numGrades)
 {
    for (int i=0; i<numGrades; i++) // Array starts at 0
    {
@@ -29,7 +29,7 @@ void getGrades(int grades[], int numGrades)
  * then the average will default to 0 and the funtion will return
  * false.
  * ********************************************************************/
-bool averageGrades(int grades[], int numGrades, int &average)
+bool averageGrades(const int grades[], const int numGrades, int &average)
 {
    int sum = 0;
    int validGrades = 0;

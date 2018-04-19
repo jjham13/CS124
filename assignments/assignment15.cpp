@@ -20,7 +20,7 @@ using namespace std;
 /*****************************************************
  * Determine based on income and tithe if the user is a full tithe payer
  *****************************************************/
-bool isFullTithePayer(float income, float tithe)
+bool isFullTithePayer(const float income, const float tithe)
 {
    // If the tithe is at least 10% of income then they are a 
    // full tithe payer.
