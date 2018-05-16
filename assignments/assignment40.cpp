@@ -15,17 +15,23 @@ using namespace std;
 
 #define BOARD_SIZE   3
 
-bool readFile(char fileName[], char board[][BOARD_SIZE], int size)
+/**********************************************************************
+ * Read the tic tac toe board from a file into a multi-dimensional
+ * array.  
+ * ********************************************************************/
+bool readFile(const char fileName[], char board[][BOARD_SIZE], const int size)
 {
    ifstream fileIn(fileName);
    char input = '\0';
 
    if (fileIn.fail())
    {
+      // Indicate failure to read the file
       return false;
    }
    int row = 0;
    int col = 0;
+   // Read in one charactar at a time.
    while (fileIn >> input)
    {
       if (row == size)
@@ -56,12 +62,17 @@ bool readFile(char fileName[], char board[][BOARD_SIZE], int size)
    return true;
 }
 
-void displayBoard(char board[][BOARD_SIZE], int size)
+/**********************************************************************
+ * Display the tic tac toe array to the screen
+ * ********************************************************************/
+void displayBoard(const char board[][BOARD_SIZE], const int size)
 {
+   // Loop through row and each column
    for (int row=0; row<size; row++)
    {
       for (int col=0; col<size; col++)
       {
+         // A dot represents a blank space on the board
          if (board[row][col] == '.')
          {
             cout << "   ";
@@ -70,11 +81,13 @@ void displayBoard(char board[][BOARD_SIZE], int size)
          {
             cout << " " << board[row][col] << " ";
          }
+         // Position the vertical bars
          if (col != size-1)
          {
             cout << "|";
          }
       }
+      // Add the horizontal bar
       if (row != size-1)
       {
          cout << "\n---+---+---\n";
@@ -83,13 +96,18 @@ void displayBoard(char board[][BOARD_SIZE], int size)
    cout << endl;
 }
 
-bool writeFile(char fileName[], char board[][BOARD_SIZE], int size)
+/*********************************************************************
+ * Write the tic tac toe array back to a file
+ * *******************************************************************/
+bool writeFile(const char fileName[], const char board[][BOARD_SIZE], const int size)
 {
    ofstream fileOut(fileName);
    if (fileOut.fail())
    {
+      // Indicate an error if unable to open the file
       return false;
    }
+   // Loop in the same way we did for displaying the board.
    for (int row=0; row<size; row++)
    {
       for (int col=0; col<size; col++)

@@ -23,7 +23,7 @@ using namespace std;
  * complete song "Dem Bones."  Note that the list of bones is provided
  * by the parameter list
  ********************************************************************/
-string generateSong(string list[], int num)
+string generateSong(const string list[], const int num)
 {
    string output;
 

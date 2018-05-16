@@ -16,7 +16,7 @@ using namespace std;
 /**********************************************************************
  * Display the numbered days (and leading whitespace) for the calendar
  * ********************************************************************/
-void displayTable(int numDays, int offset)
+void displayTable(const int numDays, const int offset)
 {
    int currCol = 0;
 

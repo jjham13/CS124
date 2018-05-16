@@ -14,7 +14,7 @@ using namespace std;
 /**********************************************************************
  * Count the number of occurances of "letter" in "text".
  * ********************************************************************/
-int countLetters(char text[], char letter)
+int countLetters(const char text[], const char letter)
 {
    int count = 0;
    int i = 0;
